@@ -10,15 +10,34 @@ const newTaskBtn = el("submit-new-task");
 
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(e.target["new-task"].value);
+  newTaskCreation(e.target["new-task"].value);
 });
 
 function newTaskCreation(task) {
   const taskLi = document.createElement("li");
-  taskLi.textContent = `${todo}  `;
+  taskLi.textContent = `${task}  `;
   const btn = document.createElement("button");
   btn.textContent = "completed";
-  btn.addEventListener("click", console.log("completed clicked"));
+  btn.addEventListener("click", handleCompletedTask);
   taskLi.appendChild(btn);
   const mainTaskUl = document.getElementById("main-task-list");
+  mainTaskUl.appendChild(taskLi);
+  taskForm.reset();
 }
+
+function handleCompletedTask(e) {
+  console.log(e);
+}
+
+const staticTask = document.getElementsByClassName("static-task");
+
+function addListenerToTasks(task) {
+  for (let task of staticTask) {
+    task.addEventListener("click", (e) => {
+      newTaskCreation(task.textContent);
+      //   newTaskCreation(task);
+    });
+  }
+}
+
+addListenerToTasks();
