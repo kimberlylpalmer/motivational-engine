@@ -1,0 +1,84 @@
+body {background-color: #85D2D0}
+
+#title-header {
+    /* height: 25vh; */
+    display: grid;
+    gap: 1px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    /* border: 3px azure solid; */
+}
+
+#header-image {
+    display: flex;
+    grid-column: 1 / span 4; /* Spans the first four columns */
+    grid-row: 1; /* Occupies the first row */
+    /* border: 3px black solid; */
+}
+
+
+#daily-advice {
+    display: grid;
+    margin-left: 100px;
+    margin-right: 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: #ffffff;
+    border-radius:100px;
+    /* border: 3px black solid; */
+}
+
+/* #daily-advice-title {
+    display: flex;
+    align-content: center;
+    border: 1px black solid;
+} */
+
+#container {
+    /* height: 75hv; */
+    margin-top: 25px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* border: 3px green solid; */
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size:20px;
+    color:#887BB0
+}
+#form-div {
+    display: flex;
+    align-items: top;
+    border: 5px white solid;
+    border-radius: 25px;
+    grid-column: span 1;
+    grid-row:span 1;
+}
+#motive-div {
+    display: flex;
+    border: 5px teal solid;
+    border-radius: 25px;
+    grid-column: span 2;
+    grid-row:span 1;
+}
+#main-task-list-div {
+    display: flex;
+    grid-column: span 1;
+    grid-row:span 2;
+    border: 5px #887BB0 solid;
+    border-radius: 25px;
+}
+#completed-task-list-div {
+    display: flex;
+    grid-column: span 1;
+    grid-row:span 2;
+    border: 5px aquamarine solid;
+    border-radius: 25px;
+}
+#suggested-task-div {
+    display: flex;
+    grid-column: span 1;
+    grid-row:span 2;
+    border: 5px #01B9CC solid;
+    border-radius: 25px;
+}
