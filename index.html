@@ -4,47 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Motivation Engine</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    />
   </head>
   <body>
-    <div>
-      <h3>Custom New Task</h3>
-      <form id="new-task-form">
-        <label>Task Description:</label>
-        <input
-          type="text"
-          id="new-task"
-          name="new-task"
-          placeholder="description" />
-        <input type="submit" id="submit-new-task" value="Create New Task" />
-      </form>
+    <!-- Header to webpage -->
+    <div id="title-header">
+      <img src="./assets/TheMotivatinEngineHeader.png" id="header-image" />
     </div>
-    <div>
-      <h2 id="motivational-phrase">You Can Do It</h2>
-      <p>motivational quote goes here when ready; we'll delete this later</p>
+    <div id="daily-advice">
+      <h3 id="daily-advice-title"></h3>
+      <!-- <p><em>API Data Goes Here</em></p> -->
     </div>
-    <div>
-      <ul id="main-task-list">
-        <h3>Your Task List</h3>
-        <!-- <li>Your Tasks Go Here</li> -->
-      </ul>
-    </div>
-    <div>
-      <ul id="completed-task-list">
-        <h3>Completed Tasks</h3>
-        <!-- <li>Your Completed Tasks</li> -->
-      </ul>
-    </div>
-    <div>
-      <ul>
-        <h3>Suggested Tasks</h3>
-        <li class="static-task">Make the bed</li>
-        <li class="static-task">Laundry</li>
-        <li class="static-task">Dishes</li>
-        <li class="static-task">Drink Water</li>
-        <li class="static-task">Take out the Garbage</li>
-        <li class="static-task">Go for a walk</li>
-        <li class="static-task">Homework</li>
-      </ul>
+
+    <!-- body of webpage -->
+    <div class="container" id="container">
+      <div id="form-div">
+        <h3>Custom New Task</h3>
+        <form id="new-task-form">
+          <label>Task Description:</label>
+          <input
+            type="text"
+            id="new-task"
+            name="new-task"
+            placeholder="description" />
+          <input type="submit" id="submit-new-task" value="Create New Task" />
+        </form>
+      </div>
+      <div id="motive-div">
+        <h2 id="motivational-phrase">You Can Do It</h2>
+        <p>motivational quotedelete this later</p>
+      </div>
+      <div id="suggested-task-div">
+        <ul id="suggested-task-list">
+          <h3 id="suggested-task-list-heading">Suggested Tasks</h3>
+          <li class="static-task">Make the bed</li>
+          <li class="static-task">Laundry</li>
+          <li class="static-task">Dishes</li>
+          <li class="static-task">Drink Water</li>
+          <li class="static-task">Take out the Garbage</li>
+          <li class="static-task">Go for a walk</li>
+          <li class="static-task">Homework</li>
+        </ul>
+      </div>
+      <div id="main-task-list-div">
+        <ul id="main-task-list">
+          <h3>Your Task List</h3>
+          <!-- <li>Your Tasks Go Here</li> -->
+        </ul>
+      </div>
+      <div id="completed-task-list-div">
+        <ul id="completed-task-list">
+          <h3>Completed Tasks</h3>
+          <!-- <li>Your Completed Tasks</li> -->
+        </ul>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>
