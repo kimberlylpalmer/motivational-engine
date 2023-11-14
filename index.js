@@ -26,7 +26,12 @@ function newTaskCreation(task) {
 }
 
 function handleCompletedTask(e) {
-  console.log(e);
+  console.log(e.target.parentNode.innerHTML);
+  const completedTaskUl = document.getElementById("completed-task-list");
+  const completedTaskLi = document.createElement("li");
+  completedTaskLi.textContent = e.target.parentNode.remove("innerHTML");
+
+  completedTaskUl.appendChild(completedTaskLi);
 }
 
 const staticTask = document.getElementsByClassName("static-task");
