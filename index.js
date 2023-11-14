@@ -41,3 +41,11 @@ function addListenerToTasks(task) {
 }
 
 addListenerToTasks();
+
+
+// motivational quote top off page 
+
+
+// moticational quote when task is completed 
+
+
