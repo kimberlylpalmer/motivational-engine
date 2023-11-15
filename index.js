@@ -13,6 +13,7 @@ const completedTaskUl = el("completed-task-list");
 
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  console.log(e.target["new-task"].value);
   newTaskCreation(e.target["new-task"].value);
 });
 
@@ -22,6 +23,7 @@ function createTaskElement(task) {
   taskLi.textContent = `${task}  `;
   const btn = document.createElement("button");
   btn.textContent = "completed";
+  btn.id = "completed-btn";
   btn.addEventListener("click", handleCompletedTask);
   taskLi.appendChild(btn);
   return taskLi;
