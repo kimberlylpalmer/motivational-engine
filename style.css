@@ -19,15 +19,23 @@ body {background-color: #85D2D0}
 
 #daily-advice {
     display: grid;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    justify-items: center;    
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     background-color: #ffffff;
     border-radius:100px;
-    border: 3px black solid;
+    /* border: 3px black solid; */
+    font-family: "Big Shoulders Display";
+    font-size: 50px;
+    color: #887BB0;
+    font-weight:bolder;
+    text-align: center;
+    /* text-shadow: */
+    /* -1px -1px 0 #000; */
 }
 
 #container {
@@ -43,6 +51,8 @@ body {background-color: #85D2D0}
     font-weight: 700;
     color:#887BB0
 }
+
+
 
 #form-div {
     display: grid;
@@ -67,6 +77,7 @@ body {background-color: #85D2D0}
     display:flex;
     grid-column: span 4;
     align-content:end;
+    font-size: 30px;
 }
 
 #new-task {
@@ -74,7 +85,12 @@ body {background-color: #85D2D0}
     background-color: #85D2D0;
     /* border: 3px green solid; */
     grid-column: span 1;
-    grid-row: span 2;    
+    grid-row: span 2;
+    height:25px;
+    width: 300px;
+    border-radius: 5px;
+    font-family: 'Big Shoulders Display', sans-serif; 
+    font-size: 20px   
 }
 
 #submit-new-task {
@@ -83,6 +99,13 @@ body {background-color: #85D2D0}
     border: 0px aquamarine solid;
     border-radius: 5px;
     box-shadow: 10px 5px 5px #887BB0;
+    color: #887BB0;
+    font-family: 'Big Shoulders Display', sans-serif; 
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 5px 20px 5px 20px;
+    /* text-shadow: -1px -1px 0 #000; */
 }
 
 #motive-div {
@@ -101,29 +124,56 @@ body {background-color: #85D2D0}
 
 #main-task-list-div {
     display: flex;
+    flex-direction: column;
     background-color: #fff;
     grid-column: span 1;
     grid-row:span 2;
     border: 5px #887BB0 solid;
     border-radius: 25px;
-    align-items: top;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+#main-task-list-header {
+    font-size: 30px;
+}
+
+
 #completed-task-list-div {
     display: flex;
+    flex-direction: column;
     background-color: #fff;
     grid-column: span 1;
     grid-row:span 2;
     border: 5px aquamarine solid;
     border-radius: 25px;
+    align-items: center;
+    justify-content: flex-start;
 }
 #suggested-task-div {
     display: flex;
+    flex-direction: column;
     background-color: #fff;
     grid-column: span 1;
     grid-row:span 2;
     border: 5px #01B9CC solid;
     border-radius: 25px;
+    align-items:center;
+}
+
+#suggested-task-list-heading {
+    margin-bottom: 1px;
+    font-size: 30px;
+    
+}
+
+#instructions-suggested-tasks {
+    margin:0px;
+    font-size:15px;
+}
+
+#complete-tasks {
+    font-size: 30px;
 }
 #completed-btn {
     background-color:aquamarine;
@@ -131,6 +181,10 @@ body {background-color: #85D2D0}
     border: 0px aquamarine solid;
     border-radius: 5px;
     box-shadow: 10px 5px 5px #887BB0;
-    margin: 25px;
-    padding: 5px
+    margin-left: 25px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 20px; 
+    color: #887bb0
 }
