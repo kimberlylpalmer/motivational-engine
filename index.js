@@ -10,6 +10,7 @@ const newTaskBtn = el("submit-new-task");
 
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  console.log(e.target["new-task"].value);
   newTaskCreation(e.target["new-task"].value);
 });
 
@@ -18,6 +19,7 @@ function newTaskCreation(task) {
   taskLi.textContent = `${task}  `;
   const btn = document.createElement("button");
   btn.textContent = "completed";
+  btn.id = "completed-btn";
   btn.addEventListener("click", handleCompletedTask);
   taskLi.appendChild(btn);
   const mainTaskUl = document.getElementById("main-task-list");
