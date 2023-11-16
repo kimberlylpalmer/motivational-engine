@@ -86,18 +86,34 @@ function renderMotivation(inspire) {
 // moticational quote when task is completed
 // still getting errors here will keep working on this.
 
-const completedTaskAPI = "https://www.affirmations.dev/";
+// const completedTaskAPI = "https://www.affirmations.dev/";
+// const taskDone = el("youCanDoIt");
+
+// function fetchMotivationQuote() {
+//   fetch(completedTaskAPI)
+//     .then((res) => res.json())
+//     .then(renderCompletedMotivation)
+//     .catch((error) => console.error("Error fetching motivation:", error));
+// }
+
+// function renderCompletedMotivation(doneAffirmation) {
+//   const affirmation = doneAffirmation.affirmation;
+//   taskDone.textContent = "";
+//   taskDone.textContent = affirmation;
+// }
+
+const completedTaskAPI = "https://api.quotable.io/quotes/random";
+console.log(completedTaskAPI);
 const taskDone = el("youCanDoIt");
 
 function fetchMotivationQuote() {
   fetch(completedTaskAPI)
     .then((res) => res.json())
-    .then(renderCompletedMotivation)
+    .then((data) => {
+      const quoteContent = data.content;
+      console.log(data[0].content);
+      console.log(quoteContent);
+    })
     .catch((error) => console.error("Error fetching motivation:", error));
 }
-
-function renderCompletedMotivation(doneAffirmation) {
-  const affirmation = doneAffirmation.affirmation;
-  taskDone.textContent = "";
-  taskDone.textContent = affirmation;
-}
+fetchMotivationQuote();
