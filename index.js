@@ -32,9 +32,21 @@ function createTaskElement(task) {
 // }
 
 function newTaskCreation(task) {
-  const taskLi = createTaskElement(task);
-  mainTaskUl.appendChild(taskLi);
-  taskForm.reset();
+  let isTaskAlreadyPresent = false;
+
+  Array.from(mainTaskUl.children).forEach((existingTaskLi) => {
+    if (existingTaskLi.textContent.trim().startsWith(task)) {
+      isTaskAlreadyPresent = true;
+    }
+  });
+
+  if (isTaskAlreadyPresent) {
+    alert("This task is already in the list.");
+  } else {
+    const taskLi = createTaskElement(task);
+    mainTaskUl.appendChild(taskLi);
+    taskForm.reset();
+  }
 }
 
 // function handleCompletedTask(e) {
@@ -49,6 +61,7 @@ function newTaskCreation(task) {
 function handleCompletedTask(e) {
   const taskText = e.target.parentNode.textContent.trim();
   const taskLi = document.createElement("li");
+  taskLi.id = "taskLi";
   taskLi.textContent = taskText;
   completedTaskUl.appendChild(taskLi);
 

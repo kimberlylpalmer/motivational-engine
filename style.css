@@ -1,19 +1,22 @@
-body {background-color: #85D2D0}
+body {
+    background-color: #85D2D0;
+    font-family: "Big Shoulders Display, sans serif";
+}
+
 
 #title-header {
-    /* height: 25vh; */
-    display: grid;
+    display: flex;
     gap: 1px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    /* border: 3px azure solid; */
+    justify-content: center;
+    align-items: center;
 }
 
 #header-image {
     display: flex;
-    grid-column: 1 / span 4; /* Spans the first four columns */
-    grid-row: 1; /* Occupies the first row */
-    /* border: 3px black solid; */
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -44,6 +47,7 @@ body {background-color: #85D2D0}
     display: grid;
     gap: 15px;
     grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     grid-template-rows: 1fr;
     /* border: 3px blue solid; */
     font-family: 'Big Shoulders Display', sans-serif;
@@ -177,7 +181,14 @@ body {background-color: #85D2D0}
 
 #complete-tasks {
     font-size: 30px;
+    margin-bottom: 5px;
+    
 }
+
+#taskLi {
+    margin-bottom: 10px;
+}
+
 #completed-btn {
     background-color:aquamarine;
     /* border: 3px #887BB0 solid; */
