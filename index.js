@@ -6,7 +6,6 @@ function el(id) {
 //Create Task form
 const taskForm = el("new-task-form");
 const inputTask = el("new-task");
-//const newTaskBtn = el("submit-new-task");
 const mainTaskUl = el("main-task-list");
 const completedTaskUl = el("completed-task-list");
 
@@ -26,25 +25,12 @@ function createTaskElement(task) {
   taskLi.appendChild(btn);
   return taskLi;
 }
-//   const mainTaskUl = document.getElementById("main-task-list");
-//   mainTaskUl.appendChild(taskLi);
-//   taskForm.reset();
-// }
 
 function newTaskCreation(task) {
   const taskLi = createTaskElement(task);
   mainTaskUl.appendChild(taskLi);
   taskForm.reset();
 }
-
-// function handleCompletedTask(e) {
-//   console.log(e.target.parentNode.innerHTML);
-//   const completedTaskUl = document.getElementById("completed-task-list");
-//   const completedTaskLi = document.createElement("li");
-//   completedTaskLi.textContent = e.target.parentNode.innerHTML;
-//   e.target.parentNode.innerHTML = "";
-//   completedTaskUl.appendChild(completedTaskLi);
-// }
 
 function handleCompletedTask(e) {
   const taskText = e.target.parentNode.textContent.trim();
@@ -62,7 +48,6 @@ function addListenerToTasks(task) {
   for (let task of staticTask) {
     task.addEventListener("click", (e) => {
       newTaskCreation(task.textContent);
-      //   newTaskCreation(task);
     });
   }
 }
@@ -70,7 +55,6 @@ function addListenerToTasks(task) {
 addListenerToTasks();
 
 // moticational quote when task is completed
-// done but i would say the you can do it is too big and the quote is to small
 
 const completedTaskAPI = "https://api.adviceslip.com/advice";
 const taskDone = el("motivational-phrase");
@@ -87,7 +71,6 @@ function renderCompletedMotivation(doneAffirmation) {
   taskDone.textContent = "";
   taskDone.textContent = affirmation;
 }
-
 
 // motivational quote top off page
 
