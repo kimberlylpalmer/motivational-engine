@@ -73,7 +73,7 @@ addListenerToTasks();
 // done but i would say the you can do it is too big and the quote is to small
 
 const completedTaskAPI = "https://api.adviceslip.com/advice";
-const taskDone = el("youCanDoIt");
+const taskDone = el("motivational-phrase");
 
 function fetchMotivationQuote() {
   fetch(completedTaskAPI)
@@ -92,7 +92,7 @@ function renderCompletedMotivation(doneAffirmation) {
 // motivational quote top off page
 
 const motivAPI = "https://api.quotable.io/quotes/random";
-const dailyquote = el("motivational-phrase");
+const dailyquote = el("daily-advice-quote");
 
 fetch(motivAPI)
   .then((res) => res.json())
