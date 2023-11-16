@@ -44,7 +44,7 @@ body {background-color: #85D2D0}
     display: grid;
     gap: 15px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     /* border: 3px blue solid; */
     font-family: 'Big Shoulders Display', sans-serif;
     font-size:20px;
@@ -129,6 +129,7 @@ body {background-color: #85D2D0}
     grid-column: span 1;
     grid-row:span 2;
     border: 5px #887BB0 solid;
+    box-shadow: 1px 1px 5px 5px #887BB0;
     border-radius: 25px;
     align-items: center;
     justify-content: flex-start;
@@ -146,6 +147,7 @@ body {background-color: #85D2D0}
     grid-column: span 1;
     grid-row:span 2;
     border: 5px aquamarine solid;
+    box-shadow: 1px 1px 5px 5px aquamarine;
     border-radius: 25px;
     align-items: center;
     justify-content: flex-start;
@@ -157,6 +159,7 @@ body {background-color: #85D2D0}
     grid-column: span 1;
     grid-row:span 2;
     border: 5px #01B9CC solid;
+    box-shadow: 1px 1px 5px 5px #01B9CC;
     border-radius: 25px;
     align-items:center;
 }
