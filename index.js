@@ -32,21 +32,9 @@ function createTaskElement(task) {
 // }
 
 function newTaskCreation(task) {
-  let isTaskAlreadyPresent = false;
-
-  Array.from(mainTaskUl.children).forEach((existingTaskLi) => {
-    if (existingTaskLi.textContent.trim().startsWith(task)) {
-      isTaskAlreadyPresent = true;
-    }
-  });
-
-  if (isTaskAlreadyPresent) {
-    alert("This task is already in the list.");
-  } else {
-    const taskLi = createTaskElement(task);
-    mainTaskUl.appendChild(taskLi);
-    taskForm.reset();
-  }
+  const taskLi = createTaskElement(task);
+  mainTaskUl.appendChild(taskLi);
+  taskForm.reset();
 }
 
 // function handleCompletedTask(e) {
@@ -61,7 +49,6 @@ function newTaskCreation(task) {
 function handleCompletedTask(e) {
   const taskText = e.target.parentNode.textContent.trim();
   const taskLi = document.createElement("li");
-  taskLi.id = "taskLi";
   taskLi.textContent = taskText;
   completedTaskUl.appendChild(taskLi);
 
@@ -82,8 +69,29 @@ function addListenerToTasks(task) {
 
 addListenerToTasks();
 
+// moticational quote when task is completed
+// done but i would say the you can do it is too big and the quote is to small
+
+const completedTaskAPI = "https://api.adviceslip.com/advice";
+const taskDone = el("youCanDoIt");
+
+function fetchMotivationQuote() {
+  fetch(completedTaskAPI)
+    .then((res) => res.json())
+    .then(renderCompletedMotivation)
+    .catch((error) => console.error("Error fetching motivation:", error));
+}
+
+function renderCompletedMotivation(doneAffirmation) {
+  const affirmation = doneAffirmation.slip.advice;
+  taskDone.textContent = "";
+  taskDone.textContent = affirmation;
+}
+
+
 // motivational quote top off page
-const motivAPI = "https://api.adviceslip.com/advice";
+
+const motivAPI = "https://api.quotable.io/quotes/random";
 const dailyquote = el("daily-advice-quote");
 
 fetch(motivAPI)
@@ -93,40 +101,5 @@ fetch(motivAPI)
 
 function renderMotivation(inspire) {
   dailyquote.innerHTML = "";
-  dailyquote.innerHTML = inspire.slip.advice;
+  dailyquote.innerHTML = inspire[0].content;
 }
-
-// moticational quote when task is completed
-// still getting errors here will keep working on this.
-
-// const completedTaskAPI = "https://www.affirmations.dev/";
-// const taskDone = el("youCanDoIt");
-
-// function fetchMotivationQuote() {
-//   fetch(completedTaskAPI)
-//     .then((res) => res.json())
-//     .then(renderCompletedMotivation)
-//     .catch((error) => console.error("Error fetching motivation:", error));
-// }
-
-// function renderCompletedMotivation(doneAffirmation) {
-//   const affirmation = doneAffirmation.affirmation;
-//   taskDone.textContent = "";
-//   taskDone.textContent = affirmation;
-// }
-
-const completedTaskAPI = "https://api.quotable.io/quotes/random";
-console.log(completedTaskAPI);
-const taskDone = el("youCanDoIt");
-
-function fetchMotivationQuote() {
-  fetch(completedTaskAPI)
-    .then((res) => res.json())
-    .then((data) => {
-      const quoteContent = data.content;
-      console.log(data[0].content);
-      console.log(quoteContent);
-    })
-    .catch((error) => console.error("Error fetching motivation:", error));
-}
-fetchMotivationQuote();
