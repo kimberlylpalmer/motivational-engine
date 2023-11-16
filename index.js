@@ -92,7 +92,7 @@ function renderCompletedMotivation(doneAffirmation) {
 // motivational quote top off page
 
 const motivAPI = "https://api.quotable.io/quotes/random";
-const dailyquote = el("daily-advice-quote");
+const dailyquote = el("motivational-phrase");
 
 fetch(motivAPI)
   .then((res) => res.json())
