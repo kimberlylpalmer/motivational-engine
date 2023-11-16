@@ -7,7 +7,11 @@ Your Personal Assistant for Productivity and Positivity
 
 ## Introduction
 
-Motivational Engine is a unique web application designed to boost your productivity and uplift your spirits through the power of positive affirmations. Whether you're tackling daily chores, embarking on personal projects, or managing professional tasks, Motivational Engine is here to keep you motivated and on track. This project is built using HTML, CSS, and JavaScript.
+Motivational Engine is a unique web application designed to boost productivity and uplift spirits through the power of positive affirmations. Whether tackling daily chores, embarking on personal projects, or managing professional tasks, Motivational Engine is here to keep its user motivated and on track. This project is built using HTML, CSS, and JavaScript.
+
+## Wire-Frame:
+
+![Alt Text](assets/WireFrame-The_Motivation_Engine.jpeg)
 
 ## Features
 
@@ -15,11 +19,13 @@ Motivational Engine is a unique web application designed to boost your productiv
 
 - Generic Task Suggestions: Not sure where to start? Choose from a wide range of pre-defined generic tasks to kickstart your productivity journey.
 
-- Progress Tracking: Visually track your accomplishments with our progress indicator. Seeing your tasks getting checked off one by one is not just satisfying, but also fuels your motivation.
-
 - Motivational Phrases: After completing each task, be greeted with an uplifting motivational phrase. These carefully crafted affirmations are designed to boost your morale and encourage you to keep moving forward.
 
 - User-Friendly Interface: With a clean and simple design, navigating through the app is a breeze. Whether you're tech-savvy or a beginner, you'll find the Motivational Engine user experience seamless and enjoyable.
+
+-Motivational Quotes: Displays a daily quote and an additional motivational quote when a task is completed.
+
+## User Stories
 
 ## Getting Started
 
@@ -27,13 +33,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Usage
 
-## Contributing
+- Adding a Task: Enter a task in the input field and click 'Create New Task'.
+- Completing a Task: Click the 'COMPLETED' button next to a task to mark it as completed.
+- Viewing Motivational Quotes: A daily motivational quote is displayed at the top of the page. Another quote appears in the motivation section upon completing a task.
+- Adding Suggested Tasks: Click on any of the suggested tasks to add them to your task list.
 
 ## Authors
 
-- **[Your Name]** - _Initial work_ - [GitHub Profile](link to your GitHub profile)
-
-See also the list of [contributors](link to the contributors graph on GitHub) who participated in this project.
+- **Kimberly Palmer and **
 
 ## License
 
@@ -41,10 +48,4 @@ This project is licensed under the [License Name] License - see the [LICENSE.md]
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## Contact
-
-For any inquiries, you can reach me at [Your Contact Information].
+- Hat tip to APIs
